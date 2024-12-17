@@ -10,17 +10,46 @@ main {
     flex-direction: row;
     flex: auto; 
     width: 100%;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        padding: 8px 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+    
+    th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
 }
 article {
     flex: 2; 
     overflow-y: auto;
 }
 aside {
-    flex: 1;
-    overflow-y: auto;
-}
-header, footer {
-    padding: 20px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        background-color: #f1f1f1;
+        padding: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        max-height: 100%;
+    }
+header{
+    padding: 10px;
     background-color: #f4f4f4;
-    text-align: center;
+    text-align: left;
 }
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px;
+    text-align: right; 
+    position: relative;
+    width: 100%;
